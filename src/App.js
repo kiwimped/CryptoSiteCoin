@@ -311,8 +311,7 @@ function About() {
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showValidationMessage, setShowValidationMessage] = useState(false);
-
+  
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
@@ -321,13 +320,7 @@ function Login() {
     setPassword(event.target.value);
   };
 
-  /*const handleSubmit = () => {
-    if (!email || !password) {
-      setShowValidationMessage(true);
-    } else {
-      // Call your login API here
-    }
-  };*/
+  
   return (
     <div>
       <h2>
@@ -360,9 +353,7 @@ function Login() {
           required
         />
       </label>
-      {showValidationMessage && (
-        <p style={{ color: "red" }}>Please fill in all fields.</p>
-      )}
+      
       <br />
             <LinkContainer to="/">
         <Button>SUBMIT</Button>
@@ -413,7 +404,7 @@ function Register() {
         Re-enter Password:
         <input type="password"
           value={repassword}
-          onChange={ handleRePasswordChange}
+          onChange={handleRePasswordChange}
           placeholder="Enter your password"
           required />
       </label>
