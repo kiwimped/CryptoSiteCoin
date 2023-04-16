@@ -371,6 +371,17 @@ function Login() {
   );
 }
 function Register() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showValidationMessage, setShowValidationMessage] = useState(false);
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
   return (
     <div>
       <h2>
