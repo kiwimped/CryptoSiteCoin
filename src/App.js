@@ -335,8 +335,7 @@ function Login() {
           LOGIN
           <br />
           <h4>
-            Don't have an account? 
-    <LinkContainer to="/Register"> <a>Register</a> </LinkContainer>
+            Don't have an account? <a href="/Register"> Register </a>
           </h4>
         </Alert>
       </h2>
