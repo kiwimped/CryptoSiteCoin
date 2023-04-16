@@ -4,7 +4,8 @@ function Settings() {
   const [accountData, setAccountData] = useState({
     username: "",
     email: "",
-    password: "",
+    oldPassword: "",
+    newPassword: "",
     confirmPassword: "",
     language: "en"
   });
@@ -19,6 +20,10 @@ function Settings() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (accountData.newPassword !== accountData.confirmPassword) {
+      window.alert("New password and confirm password do not match!");
+      return;
+    }
     console.log("Account Data:", accountData);
     window.alert("Settings saved!");
     window.location.reload();
@@ -49,17 +54,27 @@ function Settings() {
         </label>
         <br />
         <label>
-          Password:
+          Old Password:
           <input
             type="password"
-            name="password"
-            value={accountData.password}
+            name="oldPassword"
+            value={accountData.oldPassword}
             onChange={handleChange}
           />
         </label>
         <br />
         <label>
-          Confirm Password:
+          New Password:
+          <input
+            type="password"
+            name="newPassword"
+            value={accountData.newPassword}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Confirm New Password:
           <input
             type="password"
             name="confirmPassword"
