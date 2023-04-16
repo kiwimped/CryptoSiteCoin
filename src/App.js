@@ -373,6 +373,7 @@ function Login() {
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [repassword, setRePassword] = useState("");
   const [showValidationMessage, setShowValidationMessage] = useState(false);
 
   const handleEmailChange = (event) => {
@@ -381,6 +382,9 @@ function Register() {
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
+  };
+  const handleRePasswordChange = (event) => {
+    setRePassword(event.target.value);
   };
   return (
     <div>
@@ -408,8 +412,8 @@ function Register() {
       <label>
         Re-enter Password:
         <input type="password"
-          value={password}
-          onChange={handlePasswordChange}
+          value={repassword}
+          onChange={ handleRePasswordChange}
           placeholder="Enter your password"
           required />
       </label>
