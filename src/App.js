@@ -364,9 +364,9 @@ function Login() {
         <p style={{ color: "red" }}>Please fill in all fields.</p>
       )}
       <br />
-      <a href="https://i6v8lp.csb.app/">
+            <LinkContainer to="/">
         <Button>SUBMIT</Button>
-      </a>
+      </LinkContainer>
     </div>
   );
 }
@@ -391,9 +391,9 @@ function Register() {
         <input placeholder="Re-enter your password" required />
       </label>
       <br />
-      <a href="https://i6v8lp.csb.app/">
+            <LinkContainer to="/">
         <Button>SUBMIT</Button>
-      </a>
+      </LinkContainer>
     </div>
   );
 }
