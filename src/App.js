@@ -378,17 +378,29 @@ function Register() {
       </h2>
       <label>
         Email:
-        <input placeholder="Enter your email" required />
+        <input type="email"
+          value={email}
+          onChange={handleEmailChange}
+          placeholder="Enter your email"
+          required />
       </label>
       <br />
       <label>
         Password:
-        <input placeholder="Enter your password" required />
+        <input type="password"
+          value={password}
+          onChange={handlePasswordChange}
+          placeholder="Enter your password"
+          required/>
       </label>
       <br />
       <label>
         Re-enter Password:
-        <input placeholder="Re-enter your password" required />
+        <input type="password"
+          value={password}
+          onChange={handlePasswordChange}
+          placeholder="Enter your password"
+          required />
       </label>
       <br />
             <LinkContainer to="/">
